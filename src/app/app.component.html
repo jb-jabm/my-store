@@ -1,0 +1,126 @@
+
+<app-nav></app-nav>
+<hr/>
+<app-products></app-products>
+
+
+
+<!-- <p><input type="text" [(ngModel)]="imgParent"/></p>
+<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>ngh
+<hr> -->
+
+<!-- <div id="formulario" class="container text-center col-5 ">
+
+   <div class="row">
+        <img  src={{registrate}} >
+   </div>
+   <form (ngSubmit)="onRegister()" #myForm="ngForm">
+        <div class="row d-flex p-2">
+          <input type="text" class="form-control" placeholder="Nombre de usuario" name="name" required #nameValid="ngModel"
+            [(ngModel)]="register.name">
+          <p class="text-start" style="color: red;" *ngIf="!nameValid.valid; else valido">Ingrese su Nombre</p>
+          <ng-template #valido>
+            <p style="margin-top: 24px;"></p>
+          </ng-template>
+        </div>
+        <div class="row d-flex p-2">
+          <input class="form-control" placeholder="Email" type="email" name="email" required #emailValid="ngModel"
+            [(ngModel)]="register.email">
+          <p class="text-start" style="color:red;" *ngIf="!emailValid.valid; else valido">Ingrese su email </p>
+        </div>
+        <div class="row d-flex p-2">
+          <input class="form-control" placeholder="Password" type="password" name="password" required #passwordValid="ngModel" [(ngModel)]="register.password">
+          <p class="text-start" style="color:red" *ngIf="!passwordValid.valid ; else valido ">Ingrese contraseña </p>
+        </div>
+        <button class="btn btn-info btn-lg" [disabled]="myForm.invalid" type="submit">Registrar</button>
+  </form>
+</div>
+
+<hr />
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'nicolas'">
+    la persona es nicolas
+  </p>
+  <p *ngSwitchCase="'julian'">
+    la persona es julian
+  </p>
+  <p *ngSwitchCase="'jesus'">
+    la persona es jesus
+  </p>
+  <p *ngSwitchDefault>no hace mach</p>
+</div>
+<hr />
+   uso ngFor con objetos -->
+<!-- <div class="product--grid">
+  <div *ngFor="let product of products">
+    <img [src]="product.image" alt="image">
+    <h2>{{product.precio}}</h2>
+    <p>{{product.name}}</p>
+  </div>
+</div>
+<hr /> -->
+<!-- uso del *ngfor -->
+<!-- <h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName" />
+<button (click)="addName()">Add Name</button>
+<ul>
+  <li *ngIf="names.length === 0"> No hay nombres en la lista</li>
+  <li *ngFor="let name of names; index as i">
+    {{i}} {{name}}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+</ul>
+<hr /> -->
+<!-- [uso de *ngif -->
+<!-- <h1>bloque if</h1>
+<input type="text" required [(ngModel)]="person.name" />
+<p *ngIf="person.name === 'nicolas'">Soy nicolas</p>
+<p *ngIf="person.name === 'julian' && person.age === 18; else myblock">Soy julian</p>
+<ng-template #myblock>
+  <p> bloque else </p>
+</ng-template> -->
+
+<!-- data biding con ngmodel -->
+<!-- <hr />
+<h1>Ngmodel</h1>
+<p>Nombre {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<p>valid:{{ nameInput.valid}}</p>
+<p>edad {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age" />
+<p>valid:{{ ageInput.valid}}</p>
+
+<hr />
+ eventos y como usarlos  -->
+<!-- <h1>Eventos</h1>
+<button [disabled]="btnDisabled"> Enviar></button>
+<button (click)="toggleButton()">Toggle Button</button>
+<p>Edad {{person.age}}</p>
+<button (click)="increAge()">Age ++</button>
+<div class="box" (scroll)="onScroll($event)">
+  <p>Como ejemplo básico de lo que podemos conseguir con los atributos, métodos, propiedades y eventos obtenidos a
+    partir de HTMLElement hemos preparado este código. Muestran un componente seleccionable con el tabulador (propiedad
+    tabindex), y con las teclas Ctrl+Alt+S en Mac o Alt+S en Windows y Linux (propiedad accesskey), capturando un evento
+    de tipo focus, que lanza cuando se obtiene el foco, por medio del método .addEventListener. Al producirse ese evento
+    mostramos en consola un mensaje en el que usamos la propiedad .tagName. </p>
+</div>
+<p>Nombre {{person.name}}</p>
+<input type="text" [value]="person.name" (keyup)="chageName($event)" /> -->
+
+
+
+<!-- property binding forma de modificar atributos desde el controlador y mandarlos al html -->
+<!-- <h1>propiedades</h1>
+<button [disabled]="btnDisabled"> Enviar></button>
+<input type="text" [value]="person.name " />
+<progress max="100" [value]="person.age"></progress>
+<img width="100" [src]="person.avatar" />
+<h1> hola mundo </h1> -->
+
+<!--   string interpolation forma de enviar variables desde el componente hacia el html -->
+
+<!-- <h2>{{ 'hola mundo'. repeat (5) }} </h2>
+<p>8*8 = {{ 8*8 }}</p>
+<p>hola soy {{ name }} y tengo {{ age }}</p>
+<img width="200" src={{img}} alt="image"> -->

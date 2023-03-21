@@ -1,0 +1,31 @@
+.box {
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  background: red;
+}
+.product--grid{
+ display:flex;
+ flex-direction: column;
+ div{
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2, p{
+      margin:0;
+    }
+  }
+}
+
+#formulario{
+  background-image: url("https://previews.123rf.com/images/new7ducks/new7ducks1701/new7ducks170100026/68453660-fondo-abstracto-de-la-tecnolog%C3%ADa-digital-clave-de-registro-de-seguridad-dise%C3%B1o-de-fondo-de-concepto-.jpg")
+}
+
+@media screen and (min-width:40em) {
+  .product--grid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr );
+    grid-gap: 15 px;
+  }
+}
